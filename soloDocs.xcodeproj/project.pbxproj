@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A8A122C27A07BEA00F73D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */; };
 		2A8A122E27A07BEA00F73D48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */; };
-		2A8A123027A07BEA00F73D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122F27A07BEA00F73D48 /* ViewController.swift */; };
+		2A8A123027A07BEA00F73D48 /* ContractorsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */; };
 		2A8A123327A07BEA00F73D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123127A07BEA00F73D48 /* Main.storyboard */; };
 		2A8A123627A07BEA00F73D48 /* soloDocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A123427A07BEA00F73D48 /* soloDocs.xcdatamodeld */; };
 		2A8A123827A07BEC00F73D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123727A07BEC00F73D48 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 		2A8A122827A07BEA00F73D48 /* soloDocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soloDocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A8A122F27A07BEA00F73D48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorsListVC.swift; sourceTree = "<group>"; };
 		2A8A123227A07BEA00F73D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A8A123527A07BEA00F73D48 /* soloDocs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soloDocs.xcdatamodel; sourceTree = "<group>"; };
 		2A8A123727A07BEC00F73D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A855FEC27B852B20091B657 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2A8A121F27A07BEA00F73D48 = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +69,10 @@
 		2A8A122A27A07BEA00F73D48 /* soloDocs */ = {
 			isa = PBXGroup;
 			children = (
+				2A855FEC27B852B20091B657 /* Models */,
 				2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */,
 				2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */,
-				2A8A122F27A07BEA00F73D48 /* ViewController.swift */,
+				2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */,
 				2A8A123127A07BEA00F73D48 /* Main.storyboard */,
 				2A8A123727A07BEC00F73D48 /* Assets.xcassets */,
 				2A8A123927A07BEC00F73D48 /* LaunchScreen.storyboard */,
@@ -148,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8A124327A07CD600F73D48 /* SoloTableViewCell.swift in Sources */,
-				2A8A123027A07BEA00F73D48 /* ViewController.swift in Sources */,
+				2A8A123027A07BEA00F73D48 /* ContractorsListVC.swift in Sources */,
 				2A8A124527A0BAE700F73D48 /* SettingsTableViewController.swift in Sources */,
 				2A8A122C27A07BEA00F73D48 /* AppDelegate.swift in Sources */,
 				2A8A122E27A07BEA00F73D48 /* SceneDelegate.swift in Sources */,
