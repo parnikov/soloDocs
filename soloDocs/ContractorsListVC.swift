@@ -7,10 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ContractorsListVC: UIViewController {
     
+    @IBOutlet weak var textFieldCompanyName: UITextField!
+    
+    @IBOutlet weak var textCompanyName: UITextView!
     let cellId = "soloCell"
     
+    @IBAction func saveButton(_ sender: Any) {
+        
+    }
     @IBOutlet weak var viewTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +30,15 @@ class ViewController: UIViewController {
         search.searchResultsUpdater = self
         self.navigationItem.searchController = search
         
-        let btnSetting = UIBarButtonItem(title: "Настройки", style: .plain, target: self, action: #selector(goToSetting))
-        navigationItem.rightBarButtonItem = btnSetting
+        let btnSetting = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(goToSetting))
+        navigationItem.leftBarButtonItem = btnSetting
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
     }
     
     @objc func goToSetting() {
@@ -69,7 +76,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+extension ContractorsListVC: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         print(searchController.searchBar.text!)
