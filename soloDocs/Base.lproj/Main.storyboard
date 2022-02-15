@@ -12,7 +12,7 @@
         <!--Contractors List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ContractorsListVC" customModule="soloDocs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContractorsList" customModule="soloDocs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название компании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tif-lB-9pN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameCompany" text="Название компании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tif-lB-9pN">
                                                     <rect key="frame" x="20" y="7" width="394" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -41,7 +41,7 @@
                                                         <constraint firstAttribute="width" constant="67" id="w5p-ht-Fa7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание компании dsjnjkdn sdnjjnj djn j jd j sj dj j jj jnjjjjjj s d   j jdn jsn djn sdj djsjjjcd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaw-Vu-eeu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="descriptionCompany" text="Описание компании dsjnjkdn sdnjjnj djn j jd j sj dj j jj jnjjjjjj s d   j jdn jsn djn sdj djsjjjcd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaw-Vu-eeu">
                                                     <rect key="frame" x="95" y="32" width="299" height="61"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -60,6 +60,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="contractorDescription" destination="Vaw-Vu-eeu" id="hoP-Cu-FXZ"/>
+                                            <outlet property="contractorName" destination="tif-lB-9pN" id="HeA-AY-65a"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -74,16 +78,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contractors List" id="Joc-5u-b4t">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="3d6-kr-sxh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="o8I-rj-9dC">
-                                <rect key="frame" x="364" y="7" width="30" height="30.5"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dll-GO-kKW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ofx-Ng-vNa">
+                                <rect key="frame" x="364" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="plus" catalog="system"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fGy-9a-d9W" kind="show" id="qiL-aE-Nhu"/>
+                                    <segue destination="fGy-9a-d9W" kind="show" id="z8p-Yo-AQo"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -96,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
         </scene>
-        <!--Contractors ListVC-->
+        <!--Contractor Edit-->
         <scene sceneID="9bw-e7-eeL">
             <objects>
-                <viewController id="fGy-9a-d9W" customClass="ContractorsListVC" customModule="soloDocs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContractorForm" id="fGy-9a-d9W" customClass="ContractorEdit" customModule="soloDocs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qyc-x5-b1e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +142,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="m9h-iS-m1i" eventType="touchUpInside" id="ZgF-mm-azA"/>
+                                    <action selector="submitButtonAction:" destination="fGy-9a-d9W" eventType="touchUpInside" id="vyy-To-pwY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-gI-IrA">
@@ -147,6 +151,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title="   Delete">
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="fGy-9a-d9W" eventType="touchUpInside" id="vgt-VR-QBX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Aml-ka-BLd"/>
@@ -170,12 +177,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="gzM-JA-lJe"/>
                     <connections>
-                        <outlet property="textCompanyName" destination="p1M-ws-abe" id="6mW-rZ-TGi"/>
-                        <outlet property="textFieldCompanyName" destination="8Uo-iI-4Je" id="VYJ-YV-gB1"/>
+                        <outlet property="deleteButton" destination="9aq-gI-IrA" id="joU-J0-cet"/>
+                        <outlet property="textCompanyDescription" destination="p1M-ws-abe" id="4YJ-VH-31K"/>
+                        <outlet property="textFieldCompanyName" destination="8Uo-iI-4Je" id="6Q5-QL-ez2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9M-ne-7LU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="m9h-iS-m1i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1769.5652173913045" y="97.767857142857139"/>
         </scene>

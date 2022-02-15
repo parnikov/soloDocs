@@ -7,17 +7,15 @@
 
 import UIKit
 
-class ContractorsListVC: UIViewController {
+
+class ContractorsList: UIViewController {
     
-    @IBOutlet weak var textFieldCompanyName: UITextField!
-    
-    @IBOutlet weak var textCompanyName: UITextView!
     let cellId = "soloCell"
     
-    @IBAction func saveButton(_ sender: Any) {
-        
-    }
+    var contractorsList = [Contractors]()
+    
     @IBOutlet weak var viewTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +36,6 @@ class ContractorsListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
-        
     }
     
     @objc func goToSetting() {
@@ -76,25 +73,35 @@ class ContractorsListVC: UIViewController {
     }
 }
 
-extension ContractorsListVC: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         print(searchController.searchBar.text!)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return contractorsList.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:cellId) as! SoloTableViewCell
         
+        let contractor: Contractors!
+        contractor = contractorsList[indexPath.row]
+        cell.contractorName.text = contractor.name
+        cell.contractorDescription.text = contractor.preview
+    
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 0
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewTable.reloadData()
+    }
 }
