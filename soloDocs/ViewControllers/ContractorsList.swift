@@ -80,7 +80,7 @@ extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchR
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return contractorsList.count
     }
     
     
@@ -100,4 +100,8 @@ extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchR
         return 0
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewTable.reloadData()
+    }
 }

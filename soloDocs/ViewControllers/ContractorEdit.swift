@@ -6,17 +6,32 @@
 //
 
 import UIKit
+import CoreData
 
 class ContractorEdit: UIViewController {
 
     @IBOutlet weak var textFieldCompanyName: UITextField!
     @IBOutlet weak var textCompanyDescription: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
+    var contractorsList = [Contractors]()
     
     @IBAction func submitButtonAction(_ sender: Any) {
-        
-        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Contractors", in: context)
+        let insertItem = Contractors(entity: entity!, insertInto: context)
+        insertItem.id = 5
+        insertItem.name = textFieldCompanyName.text
+        insertItem.preview = textCompanyDescription.text
+        do {
+            try context.save()
+            contractorsList.append(insertItem)
+            navigationController?.popViewController(animated: true)
+        } catch {
+            print("context save error")
+        }
     }
+    
     @IBAction func deleteButtonAction(_ sender: Any) {
         
         
