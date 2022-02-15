@@ -9,27 +9,31 @@
 /* Begin PBXBuildFile section */
 		2A8A122C27A07BEA00F73D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */; };
 		2A8A122E27A07BEA00F73D48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */; };
-		2A8A123027A07BEA00F73D48 /* ContractorsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */; };
+		2A8A123027A07BEA00F73D48 /* ContractorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A122F27A07BEA00F73D48 /* ContractorsList.swift */; };
 		2A8A123327A07BEA00F73D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123127A07BEA00F73D48 /* Main.storyboard */; };
-		2A8A123627A07BEA00F73D48 /* soloDocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A123427A07BEA00F73D48 /* soloDocs.xcdatamodeld */; };
 		2A8A123827A07BEC00F73D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123727A07BEC00F73D48 /* Assets.xcassets */; };
 		2A8A123B27A07BEC00F73D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123927A07BEC00F73D48 /* LaunchScreen.storyboard */; };
 		2A8A124327A07CD600F73D48 /* SoloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A124227A07CD600F73D48 /* SoloTableViewCell.swift */; };
 		2A8A124527A0BAE700F73D48 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A124427A0BAE700F73D48 /* SettingsTableViewController.swift */; };
+		2ADD542427BA56B500B94EDF /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD542327BA56B500B94EDF /* Models */; };
+		2ADD542727BA56D000B94EDF /* soloDocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD542527BA56D000B94EDF /* soloDocs.xcdatamodeld */; };
+		2AFC24B127B9A4D500807539 /* ContractorEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC24AF27B9A4D500807539 /* ContractorEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A8A122827A07BEA00F73D48 /* soloDocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soloDocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorsListVC.swift; sourceTree = "<group>"; };
+		2A8A122F27A07BEA00F73D48 /* ContractorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorsList.swift; sourceTree = "<group>"; };
 		2A8A123227A07BEA00F73D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A8A123527A07BEA00F73D48 /* soloDocs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soloDocs.xcdatamodel; sourceTree = "<group>"; };
 		2A8A123727A07BEC00F73D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A8A123A27A07BEC00F73D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A8A123C27A07BEC00F73D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A8A124227A07CD600F73D48 /* SoloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloTableViewCell.swift; sourceTree = "<group>"; };
 		2A8A124427A0BAE700F73D48 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2ADD542327BA56B500B94EDF /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		2ADD542627BA56D000B94EDF /* soloDocs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soloDocs.xcdatamodel; sourceTree = "<group>"; };
+		2AFC24AF27B9A4D500807539 /* ContractorEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,13 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A855FEC27B852B20091B657 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		2A8A121F27A07BEA00F73D48 = {
 			isa = PBXGroup;
 			children = (
@@ -69,19 +66,28 @@
 		2A8A122A27A07BEA00F73D48 /* soloDocs */ = {
 			isa = PBXGroup;
 			children = (
-				2A855FEC27B852B20091B657 /* Models */,
+				2ADD542327BA56B500B94EDF /* Models */,
+				2AFC24A927B9942900807539 /* ViewControllers */,
 				2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */,
 				2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */,
-				2A8A122F27A07BEA00F73D48 /* ContractorsListVC.swift */,
 				2A8A123127A07BEA00F73D48 /* Main.storyboard */,
 				2A8A123727A07BEC00F73D48 /* Assets.xcassets */,
 				2A8A123927A07BEC00F73D48 /* LaunchScreen.storyboard */,
 				2A8A123C27A07BEC00F73D48 /* Info.plist */,
-				2A8A123427A07BEA00F73D48 /* soloDocs.xcdatamodeld */,
 				2A8A124227A07CD600F73D48 /* SoloTableViewCell.swift */,
 				2A8A124427A0BAE700F73D48 /* SettingsTableViewController.swift */,
+				2ADD542527BA56D000B94EDF /* soloDocs.xcdatamodeld */,
 			);
 			path = soloDocs;
+			sourceTree = "<group>";
+		};
+		2AFC24A927B9942900807539 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A8A122F27A07BEA00F73D48 /* ContractorsList.swift */,
+				2AFC24AF27B9A4D500807539 /* ContractorEdit.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +150,7 @@
 			files = (
 				2A8A123B27A07BEC00F73D48 /* LaunchScreen.storyboard in Resources */,
 				2A8A123827A07BEC00F73D48 /* Assets.xcassets in Resources */,
+				2ADD542427BA56B500B94EDF /* Models in Resources */,
 				2A8A123327A07BEA00F73D48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,11 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8A124327A07CD600F73D48 /* SoloTableViewCell.swift in Sources */,
-				2A8A123027A07BEA00F73D48 /* ContractorsListVC.swift in Sources */,
+				2A8A123027A07BEA00F73D48 /* ContractorsList.swift in Sources */,
+				2ADD542727BA56D000B94EDF /* soloDocs.xcdatamodeld in Sources */,
 				2A8A124527A0BAE700F73D48 /* SettingsTableViewController.swift in Sources */,
 				2A8A122C27A07BEA00F73D48 /* AppDelegate.swift in Sources */,
+				2AFC24B127B9A4D500807539 /* ContractorEdit.swift in Sources */,
 				2A8A122E27A07BEA00F73D48 /* SceneDelegate.swift in Sources */,
-				2A8A123627A07BEA00F73D48 /* soloDocs.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = soloDocs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = soloDocs;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -338,6 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = soloDocs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = soloDocs;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -380,12 +390,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2A8A123427A07BEA00F73D48 /* soloDocs.xcdatamodeld */ = {
+		2ADD542527BA56D000B94EDF /* soloDocs.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2A8A123527A07BEA00F73D48 /* soloDocs.xcdatamodel */,
+				2ADD542627BA56D000B94EDF /* soloDocs.xcdatamodel */,
 			);
-			currentVersion = 2A8A123527A07BEA00F73D48 /* soloDocs.xcdatamodel */;
+			currentVersion = 2ADD542627BA56D000B94EDF /* soloDocs.xcdatamodel */;
 			path = soloDocs.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

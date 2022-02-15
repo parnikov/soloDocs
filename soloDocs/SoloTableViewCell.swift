@@ -9,6 +9,8 @@ import UIKit
 
 class SoloTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var contractorName: UILabel!
+    @IBOutlet weak var contractorDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
