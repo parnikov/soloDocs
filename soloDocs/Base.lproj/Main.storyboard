@@ -94,7 +94,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="viewTable" destination="rVK-Gg-Gka" id="tvF-k1-gS8"/>
-                        <segue destination="fGy-9a-d9W" kind="show" id="mBN-3A-L8e"/>
+                        <segue destination="fGy-9a-d9W" kind="show" identifier="ContractorEdit" id="mBN-3A-L8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7k-p4-u48">
-                                <rect key="frame" x="20" y="379" width="56" height="31"/>
+                                <rect key="frame" x="20" y="379" width="55.5" height="31"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
@@ -147,7 +147,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-gI-IrA">
-                                <rect key="frame" x="101" y="379" width="98" height="31"/>
+                                <rect key="frame" x="136.5" y="379" width="98" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title="   Delete">
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
@@ -163,6 +163,7 @@
                             <constraint firstItem="iDS-3N-B09" firstAttribute="top" secondItem="8Uo-iI-4Je" secondAttribute="bottom" constant="31" id="4gw-Id-pQX"/>
                             <constraint firstItem="8Bv-Vg-k57" firstAttribute="top" secondItem="Aml-ka-BLd" secondAttribute="top" id="6b2-0D-bH0"/>
                             <constraint firstItem="p1M-ws-abe" firstAttribute="width" secondItem="8Uo-iI-4Je" secondAttribute="width" id="75u-57-Oq9"/>
+                            <constraint firstItem="9aq-gI-IrA" firstAttribute="centerX" secondItem="p1M-ws-abe" secondAttribute="centerX" id="HOd-yN-vM0"/>
                             <constraint firstItem="p1M-ws-abe" firstAttribute="leading" secondItem="Aml-ka-BLd" secondAttribute="leading" constant="20" id="Usf-sa-EaH"/>
                             <constraint firstItem="D7k-p4-u48" firstAttribute="top" secondItem="p1M-ws-abe" secondAttribute="bottom" constant="30" id="X4H-uQ-qS4"/>
                             <constraint firstItem="8Uo-iI-4Je" firstAttribute="width" secondItem="qyc-x5-b1e" secondAttribute="width" multiplier="0.8" id="aJn-PG-ga1"/>
@@ -171,13 +172,13 @@
                             <constraint firstItem="D7k-p4-u48" firstAttribute="leading" secondItem="Aml-ka-BLd" secondAttribute="leading" constant="20" id="gJl-G0-NrQ"/>
                             <constraint firstItem="9aq-gI-IrA" firstAttribute="top" secondItem="p1M-ws-abe" secondAttribute="bottom" constant="30" id="jom-sQ-8LP"/>
                             <constraint firstItem="8Uo-iI-4Je" firstAttribute="leading" secondItem="Aml-ka-BLd" secondAttribute="leading" constant="20" id="kI7-vc-fHE"/>
-                            <constraint firstItem="9aq-gI-IrA" firstAttribute="leading" secondItem="D7k-p4-u48" secondAttribute="trailing" constant="25" id="lQ5-K7-Vjs"/>
                             <constraint firstItem="8Uo-iI-4Je" firstAttribute="top" secondItem="8Bv-Vg-k57" secondAttribute="bottom" constant="8" symbolic="YES" id="owq-cG-QZq"/>
                             <constraint firstItem="8Bv-Vg-k57" firstAttribute="leading" secondItem="Aml-ka-BLd" secondAttribute="leading" constant="20" id="sVA-dv-NYv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gzM-JA-lJe"/>
                     <connections>
+                        <outlet property="deleteButton" destination="9aq-gI-IrA" id="AS7-4e-LRw"/>
                         <outlet property="textCompanyDescription" destination="p1M-ws-abe" id="4YJ-VH-31K"/>
                         <outlet property="textFieldCompanyName" destination="8Uo-iI-4Je" id="6Q5-QL-ez2"/>
                     </connections>
@@ -301,7 +302,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z8p-Yo-AQo"/>
+        <segue reference="mBN-3A-L8e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="document" width="512" height="512"/>
