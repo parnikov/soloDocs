@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
+var contractorsList = [Contractors]()
 
 class ContractorsList: UIViewController {
     
     let cellId = "soloCell"
-    
-    var contractorsList = [Contractors]()
+    var firstLoad = true
     
     @IBOutlet weak var viewTable: UITableView!
     
@@ -30,6 +31,21 @@ class ContractorsList: UIViewController {
         
         let btnSetting = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(goToSetting))
         navigationItem.leftBarButtonItem = btnSetting
+        if(firstLoad) {
+            firstLoad = false
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contractors")
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let note = result as! Contractors
+                    contractorsList.append(note)
+                }
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }
         
     }
     
@@ -97,11 +113,13 @@ extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchR
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+        return 120
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         viewTable.reloadData()
+        
+        print(contractorsList.count)
     }
 }
