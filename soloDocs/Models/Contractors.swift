@@ -6,11 +6,9 @@
 //
 
 import CoreData
-
 @objc(Contractors)
 class Contractors: NSManagedObject {
-    
     @NSManaged var id: NSNumber!
-    @NSManaged var name: String!
-    @NSManaged var preview: String!
+    @NSManaged public var name: String!
+    @NSManaged public var preview: String!
 }

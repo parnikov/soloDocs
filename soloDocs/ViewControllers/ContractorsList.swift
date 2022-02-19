@@ -20,33 +20,21 @@ class ContractorsList: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(firstLoad) {
+            firstLoad = false
+            contractorsList = getContractorList()
+        }
+        
         viewTable.dataSource = self
         viewTable.delegate = self
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        //viewTable.isEditing = true
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
         self.navigationItem.searchController = search
         
         let btnSetting = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(goToSetting))
         navigationItem.leftBarButtonItem = btnSetting
-        if(firstLoad) {
-            firstLoad = false
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contractors")
-            do {
-                let results:NSArray = try context.fetch(request) as NSArray
-                for result in results {
-                    let note = result as! Contractors
-                    contractorsList.append(note)
-                }
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
-            }
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,13 +80,25 @@ class ContractorsList: UIViewController {
 extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text!)
+        if let textSearch = searchController.searchBar.text {
+            var searchContractor = [Contractors]()
+            if textSearch.count >= 2 {
+                for contractor in contractorsList {
+                    if contractor.name.contains(textSearch) {
+                        searchContractor.append(contractor)
+                    }
+                }
+                contractorsList = searchContractor
+                viewTable.reloadData()
+            }
+        } else {
+            contractorsList = getContractorList()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contractorsList.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -116,10 +116,42 @@ extension ContractorsList: UITableViewDelegate, UITableViewDataSource, UISearchR
         return 120
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        self.performSegue(withIdentifier: "ContractorEdit", sender: self)
+    }
+    
+    func getContractorList() -> [Contractors] {
+        var noDeleteNoteList = [Contractors]()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contractors")
+        do {
+            let results:NSArray = try context.fetch(request) as NSArray
+            for result in results {
+                let contractor = result as! Contractors
+                noDeleteNoteList.append(contractor)
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        return noDeleteNoteList
+    }
     
     override func viewDidAppear(_ animated: Bool) {
+        contractorsList = getContractorList()
         viewTable.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print(contractorsList.count)
+        if(segue.identifier == "ContractorEdit") {
+            let indexPath = viewTable.indexPathForSelectedRow!
+            let contractorEdit = segue.destination as? ContractorEdit
+            let selectedContractor : Contractors!
+            selectedContractor = getContractorList()[indexPath.row]
+            contractorEdit!.selectedContractor = selectedContractor
+    
+            viewTable.deselectRow(at: indexPath, animated: true)
+        }
     }
 }
