@@ -15,8 +15,8 @@
 		2A8A123B27A07BEC00F73D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A123927A07BEC00F73D48 /* LaunchScreen.storyboard */; };
 		2A8A124327A07CD600F73D48 /* SoloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A124227A07CD600F73D48 /* SoloTableViewCell.swift */; };
 		2A8A124527A0BAE700F73D48 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8A124427A0BAE700F73D48 /* SettingsTableViewController.swift */; };
-		2ADD542427BA56B500B94EDF /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD542327BA56B500B94EDF /* Models */; };
 		2ADD542727BA56D000B94EDF /* soloDocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD542527BA56D000B94EDF /* soloDocs.xcdatamodeld */; };
+		2ADD542E27BD835C00B94EDF /* Contractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD542D27BD835C00B94EDF /* Contractors.swift */; };
 		2AFC24B127B9A4D500807539 /* ContractorEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC24AF27B9A4D500807539 /* ContractorEdit.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +31,8 @@
 		2A8A123C27A07BEC00F73D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A8A124227A07CD600F73D48 /* SoloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloTableViewCell.swift; sourceTree = "<group>"; };
 		2A8A124427A0BAE700F73D48 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		2ADD542327BA56B500B94EDF /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		2ADD542627BA56D000B94EDF /* soloDocs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soloDocs.xcdatamodel; sourceTree = "<group>"; };
+		2ADD542D27BD835C00B94EDF /* Contractors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contractors.swift; sourceTree = "<group>"; };
 		2AFC24AF27B9A4D500807539 /* ContractorEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +66,7 @@
 		2A8A122A27A07BEA00F73D48 /* soloDocs */ = {
 			isa = PBXGroup;
 			children = (
-				2ADD542327BA56B500B94EDF /* Models */,
+				2ADD542C27BD832700B94EDF /* Models */,
 				2AFC24A927B9942900807539 /* ViewControllers */,
 				2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */,
 				2A8A122D27A07BEA00F73D48 /* SceneDelegate.swift */,
@@ -79,6 +79,14 @@
 				2ADD542527BA56D000B94EDF /* soloDocs.xcdatamodeld */,
 			);
 			path = soloDocs;
+			sourceTree = "<group>";
+		};
+		2ADD542C27BD832700B94EDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ADD542D27BD835C00B94EDF /* Contractors.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2AFC24A927B9942900807539 /* ViewControllers */ = {
@@ -150,7 +158,6 @@
 			files = (
 				2A8A123B27A07BEC00F73D48 /* LaunchScreen.storyboard in Resources */,
 				2A8A123827A07BEC00F73D48 /* Assets.xcassets in Resources */,
-				2ADD542427BA56B500B94EDF /* Models in Resources */,
 				2A8A123327A07BEA00F73D48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +175,7 @@
 				2A8A124527A0BAE700F73D48 /* SettingsTableViewController.swift in Sources */,
 				2A8A122C27A07BEA00F73D48 /* AppDelegate.swift in Sources */,
 				2AFC24B127B9A4D500807539 /* ContractorEdit.swift in Sources */,
+				2ADD542E27BD835C00B94EDF /* Contractors.swift in Sources */,
 				2A8A122E27A07BEA00F73D48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
