@@ -22,6 +22,10 @@ class ContractorEdit: UIViewController {
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Contractors", in: context)
         
+        textFieldCompanyName.layer.masksToBounds = true
+        textFieldCompanyName.layer.borderColor = UIColor.blue.cgColor
+        textFieldCompanyName.layer.borderWidth = 1.0
+        
         if selectedContractor == nil {
             
             let insertItem = Contractors(entity: entity!, insertInto: context)
@@ -34,7 +38,9 @@ class ContractorEdit: UIViewController {
                 contractorsList.append(insertItem)
                 navigationController?.popViewController(animated: true)
             } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
+                let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                alert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: nil ))
+                self.present(alert, animated: true, completion: nil)
             }
         } else {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Contractors")

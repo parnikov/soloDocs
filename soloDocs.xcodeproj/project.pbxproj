@@ -66,6 +66,7 @@
 		2A8A122A27A07BEA00F73D48 /* soloDocs */ = {
 			isa = PBXGroup;
 			children = (
+				2AE4438A27C2A69D004BD5C2 /* lib */,
 				2ADD542C27BD832700B94EDF /* Models */,
 				2AFC24A927B9942900807539 /* ViewControllers */,
 				2A8A122B27A07BEA00F73D48 /* AppDelegate.swift */,
@@ -87,6 +88,13 @@
 				2ADD542D27BD835C00B94EDF /* Contractors.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2AE4438A27C2A69D004BD5C2 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		2AFC24A927B9942900807539 /* ViewControllers */ = {
